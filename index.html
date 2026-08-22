@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Rayna Only</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+
+      background:
+        url("https://raw.githubusercontent.com/ZrooPro/SaveDat2/main/uploads/20260813_164222_468_6hi31y8x.jpg")
+        no-repeat center center/cover;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      padding: 20px;
+      color: white;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 420px;
+
+      padding: 30px 22px;
+
+      background: rgba(0, 0, 0, 0.45);
+
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+
+      border: 1px solid rgba(255, 255, 255, 0.15);
+
+      border-radius: 25px;
+
+      text-align: center;
+
+      box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    /* ==================== */
+    /* PROFIL */
+    /* ==================== */
+
+    .profile {
+      margin-bottom: 28px;
+    }
+
+    .profile img {
+      width: 105px;
+      height: 105px;
+
+      border-radius: 50%;
+
+      object-fit: cover;
+
+      border: 3px solid white;
+
+      box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.4);
+
+      margin-bottom: 14px;
+    }
+
+    .profile h1 {
+      font-size: 27px;
+      font-weight: bold;
+
+      margin-bottom: 7px;
+    }
+
+    .profile p {
+      font-size: 14px;
+
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    /* ==================== */
+    /* LINK CARD */
+    /* ==================== */
+
+    .link-card {
+      position: relative;
+
+      display: flex;
+      align-items: center;
+
+      gap: 14px;
+
+      width: 100%;
+
+      padding: 11px;
+
+      margin-bottom: 13px;
+
+      border-radius: 16px;
+
+      text-decoration: none;
+      color: white;
+
+      overflow: hidden;
+
+      border: 1px solid rgba(255, 255, 255, 0.18);
+
+      box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.25);
+
+      transition: 0.25s ease;
+    }
+
+    /* ==================== */
+    /* BACKGROUND LINK 1 */
+    /* ==================== */
+
+    .link-1 {
+      background:
+        linear-gradient(
+          rgba(0, 0, 0, 0.45),
+          rgba(0, 0, 0, 0.45)
+        ),
+        url("https://raw.githubusercontent.com/ZrooPro/SaveDat2/main/uploads/20260813_115224_701_nogt597l.jpg")
+        center/cover no-repeat;
+    }
+
+    /* ==================== */
+    /* BACKGROUND LINK 2 */
+    /* ==================== */
+
+    .link-2 {
+      background:
+        linear-gradient(
+          rgba(0, 0, 0, 0.45),
+          rgba(0, 0, 0, 0.45)
+        ),
+        url("https://raw.githubusercontent.com/ZrooPro/SaveDat2/main/uploads/20260813_120155_038_8vq1ioy5.jpg")
+        center/cover no-repeat;
+    }
+
+    .link-card:hover {
+      transform: translateY(-3px) scale(1.02);
+
+      box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.4);
+    }
+
+    .link-card:active {
+      transform: scale(0.97);
+    }
+
+    /* ==================== */
+    /* ICON LINK */
+    /* ==================== */
+
+    .link-card img {
+      width: 52px;
+      height: 52px;
+
+      object-fit: cover;
+
+      border-radius: 13px;
+
+      background: rgba(255, 255, 255, 0.9);
+
+      flex-shrink: 0;
+
+      box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.35);
+    }
+
+    .link-text {
+      text-align: left;
+    }
+
+    .link-text h3 {
+      font-size: 16px;
+
+      margin-bottom: 4px;
+    }
+
+    .link-text p {
+      font-size: 12px;
+
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    /* ==================== */
+    /* MUSIC BUTTON */
+    /* ==================== */
+
+    #musicButton {
+      position: fixed;
+
+      bottom: 20px;
+      right: 20px;
+
+      padding: 11px 16px;
+
+      border: 1px solid rgba(255, 255, 255, 0.2);
+
+      border-radius: 30px;
+
+      background: rgba(0, 0, 0, 0.6);
+
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+
+      color: white;
+
+      font-size: 13px;
+
+      cursor: pointer;
+
+      box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.3);
+
+      transition: 0.25s ease;
+    }
+
+    #musicButton:hover {
+      transform: scale(1.05);
+
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    #musicButton:active {
+      transform: scale(0.95);
+    }
+
+    /* ==================== */
+    /* FOOTER */
+    /* ==================== */
+
+    .footer {
+      margin-top: 22px;
+
+      font-size: 11px;
+
+      color: rgba(255, 255, 255, 0.55);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- PROFIL -->
+
+    <div class="profile">
+
+      <img
+        src="https://raw.githubusercontent.com/ZrooPro/SaveDat2/main/uploads/20260813_163824_093_ojys1y0s.jpg"
+        alt="Rayna Only"
+      >
+
+      <h1>Rayna Only</h1>
+
+      <p>Bot WhatsApp cepat • praktis • tersedia 24/7</p>
+
+    </div>
+
+
+    <!-- GROUP V1 -->
+
+    <a
+      class="link-card link-1"
+      href="https://chat.whatsapp.com/JscXfKR42axCLkVGZSZA7L?s=cl&p=a&ilr=4"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+
+      <img
+        src="https://raw.githubusercontent.com/ZrooPro/SaveDat1/main/uploads/20260813_120925_749_acpbtrvr.jpg"
+        alt="WhatsApp Group V1"
+      >
+
+      <div class="link-text">
+
+        <h3>WhatsApp Group V1</h3>
+
+        <p>Gabung ke grup Rayna V1</p>
+
+      </div>
+
+    </a>
+
+
+    <!-- GROUP V2 -->
+
+    <a
+      class="link-card link-1"
+      href="https://chat.whatsapp.com/HdZWfUjZ39PB7kXIHa8Hen?s=cl&p=a&ilr=4"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+
+      <img
+        src="https://raw.githubusercontent.com/ZrooPro/SaveDat1/main/uploads/20260813_120925_749_acpbtrvr.jpg"
+        alt="WhatsApp Group V2"
+      >
+
+      <div class="link-text">
+
+        <h3>WhatsApp Group V2</h3>
+
+        <p>Gabung ke grup Rayna V2</p>
+
+      </div>
+
+    </a>
+
+
+    <!-- SALURAN -->
+
+    <a
+      class="link-card link-1"
+      href="https://whatsapp.com/channel/0029VbDA5xL2kNFl9dDEqm20"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+
+      <img
+        src="https://raw.githubusercontent.com/ZrooPro/SaveDat1/main/uploads/20260813_120925_749_acpbtrvr.jpg"
+        alt="WhatsApp Channel"
+      >
+
+      <div class="link-text">
+
+        <h3>Saluran WhatsApp</h3>
+
+        <p>Ikuti saluran Rayna Only</p>
+
+      </div>
+
+    </a>
+
+
+    <!-- INSTAGRAM -->
+
+    <a
+      class="link-card link-2"
+      href="https://www.instagram.com/ray_n440?igsh=a3d5cHBvNGIydDUw"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+
+      <img
+        src="https://raw.githubusercontent.com/ZrooPro/SaveDat1/main/uploads/20260813_120838_507_uryfkd1p.jpg"
+        alt="Instagram"
+      >
+
+      <div class="link-text">
+
+        <h3>Instagram</h3>
+
+        <p>@ray_n440</p>
+
+      </div>
+
+    </a>
+
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+      © 2026 Rayna Only
+    </div>
+
+  </div>
+
+
+  <!-- ==================== -->
+  <!-- MUSIK -->
+  <!-- ==================== -->
+
+  <video
+    id="bgMusic"
+    loop
+    playsinline
+    preload="auto"
+    style="display: none;"
+  >
+    <source
+      src="https://n.uguu.se/hwExSCDw.mp4"
+      type="video/mp4"
+    >
+  </video>
+
+
+  <!-- TOMBOL MUSIK -->
+
+  <button id="musicButton" onclick="toggleMusic()">
+    🎵 Musik
+  </button>
+
+
+  <script>
+
+    const music = document.getElementById("bgMusic");
+    const button = document.getElementById("musicButton");
+
+    function toggleMusic() {
+
+      if (music.paused) {
+
+        music.play()
+          .then(() => {
+
+            button.innerHTML = "🔊 Musik ON";
+
+          })
+          .catch(() => {
+
+            button.innerHTML = "⚠️ Gagal diputar";
+
+          });
+
+      } else {
+
+        music.pause();
+
+        button.innerHTML = "🔇 Musik OFF";
+
+      }
+
+    }
+
+  </script>
+
+</body>
+      </html>
